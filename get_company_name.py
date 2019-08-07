@@ -11,7 +11,11 @@ import requests
 # api-endpoint 
 URL = "https://api.macaddress.io/v1?"
   
-mac_address = sys.argv[1]
+if len(sys.argv) < 2:
+    print("Please provide MAC adress as input!!!")
+    sys.exit(1)
+else:
+    mac_address = sys.argv[1]
 
 print("input mac:",mac_address)
 
